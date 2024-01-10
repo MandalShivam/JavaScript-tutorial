@@ -55,6 +55,7 @@ const myFunction = function(){
 // ------------------------------------------------------------
 //memory
 // Stack (Primitive)  , Heap (Non-Primitive)
+// primitive variable will get space in stack and non-primitive in heap
 // if we copy primitive value in another variable then value will be copyied to another variable
 // but if we want to copy non-primitive then reference will be stored in another variable
 let youtubename = "shivamMandaldotcom"
