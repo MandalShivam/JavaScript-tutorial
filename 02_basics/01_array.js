@@ -73,33 +73,58 @@ console.log(arr2)
 
 console.log(arr2.includes(6)) // check if element is present or not // return true or false
 
-console.log(arr2.join()) //4,6,9,0,7,5,33
+//console.log(arr2.join()) //4,6,9,0,7,5,33
  //join()  ---    // Method is used to join the elements of an array into a string. 
                         //The elements of the string will be separated by a specified separator and 
                         //its default value is a comma(,).
 
 
  let myarr = [3,6,4,5,7,2,9]
- console.log(myarr)  
+ //console.log(myarr)  
  
  // ---- slice(start,end)
  let myarr2 = myarr.slice(2,5) // it take the portion of array from start index to before last index
- console.log(myarr2) //[ 4, 5, 7 ]
+ //console.log(myarr2) //[ 4, 5, 7 ]
 
  let mr = myarr.slice(2)// return array of element starts from 2nd index to the end
- console.log(mr) // [ 4, 5, 7, 2, 9 ]
+ //console.log(mr) // [ 4, 5, 7, 2, 9 ]
 
  let mr1 = myarr.slice(-4) // -ve indexing start from end element of array 
                             // last element 9 has -1 index, so it will print -4,-3,-2,-1 elements
                             // that is [ 5, 7, 2, 9 ]
- console.log(mr1) //[ 5, 7, 2, 9 ]
+ //console.log(mr1) //[ 5, 7, 2, 9 ]
 
  let mr2 = myarr.slice(-5,-2)
- console.log(mr2) //[ 4, 5, 7 ]
+ //console.log(mr2) //[ 4, 5, 7 ]
  // if not found it will return empty array
 
- // ---- splice()
+ //slice() -- it will not affect orginal/existing array
 
+ 
+ 
+ // ---- splice(start index,how many element to be deleted 
+ //from start index,element/elements to be added)
+
+ // -- > it will affect or change original array
+
+ let myAR = [2,3,4,5,6,7,8,9]
+let h = myAR.splice(2,1,7) // -- it will change the original array to [2,3,7,5,6,7,8,9]
+                            // means it will put 7 at 2nd index by deleting one element 
+                            //  from start index means at 2nd index which is 4
+console.log(myAR) //[2,3,7,5,6,7,8,9]
+console.log(myAR.splice(2,2))// [7,5]
+console.log(myAR) // [2,3,6,7,8,9]
+myAR.splice(-2,-2)
+console.log(myAR)
+
+let are = [1,2,3,4]
+console.log(are[-1]) // undefined
+
+let mr4 = are.slice(1,3)
+console.log(mr4)
+let mr5 = are.splice(1,3,6)
+console.log(mr5)
+console.log(are)
 
 //  console.log("this is original array "+myarr)
 
