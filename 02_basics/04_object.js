@@ -81,6 +81,10 @@ console.log(Object.entries(tinderUser)); //[ [ 'id', '123abc' ], [ 'name', 'Samm
 // console.log(tinderUser.hasOwnProperty('isLoggedIn')); // true
 
 
+
+//--- destructuring object--//
+// its main aim to avoid writing like if to access object property we use dot operator
+// we can access by simple name like below
 const course = {
     coursename: "js in hindi",
     price: "999",
@@ -89,18 +93,19 @@ const course = {
 
 // course.courseInstructor
 
-//const {courseInstructor: instructor} = course
+//const {courseInstructor: instructor} = course  // by using this we can access courseInstructor 
+  // by instructor 
 
 // console.log(courseInstructor);
 //console.log(instructor);
 
-// {
+// {   /////---------------- this data in  json format (this is data come from api) 
 //     "name": "hitesh",
 //     "coursename": "js in hindi",
 //     "price": "free"
 // }
 
-[
+[      // data come from api in this format json 
     {},
     {},
     {}
@@ -127,5 +132,21 @@ const course = {
 
 
  // ----- we use mostly 
- //const objt3 = {...objt1,...objt2} // to combine object
+ //const objt3 = {...objt1,...objt2} // to combine object  
+
+ 
+ //object destructuring  we
+ const myobj = {
+    name : "shivam",
+    age : 56
+ }
+ const {age} = myobj
+ console.log(age)
+
+ const mobj1 = {
+    name1 : "sonu"
+ }
+
+ let {name1} = mobj1
+ console.log(name1)
  
