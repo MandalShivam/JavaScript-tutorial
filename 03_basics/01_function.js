@@ -35,30 +35,48 @@ function loginUserMessage(username = "sam"){ // here username = "same" -- > In j
     return `${username} just logged in`
 }
 
-// console.log(loginUserMessage("hitesh"))
-// console.log(loginUserMessage("hitesh"))
+// in  -- > if("") here "" will be considered as false
+ //  -- > if(undefined) here undefined is also considered as false
+
+// console.log(loginUserMessage("hitesh")) // hitesh just logged in
+// console.log(loginUserMessage()) // sam just logged in 
+    // here if do not specify the default value the --- undefined just logged in  would be shown
+
+    //------------- varibale arguments ----------
+
+    function calculateCartPrice1(...num1){
+        return num1
+    } 
+     console.log(calculateCartPrice1(4,5,6,7))  // [ 4, 5, 6, 7 ] -- here this ...num1 means 
+      //it can take any number of parameters and will take as an array
 
 
 function calculateCartPrice(val1, val2, ...num1){
     return num1
 }
 
-// console.log(calculateCartPrice(200, 400, 500, 2000))
+ console.log(calculateCartPrice(200, 400, 500, 2000))  //[ 500, 2000 ] // here 200 will be assigned 
+     // in val1 , 400 in val2 and rest of the value be assigned in num1 as an array
+
+//--------------------------------------- object as an arguments------
 
 const user = {
     username: "hitesh",
-    prices: 199
+    price: 199
 }
 
 function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
-// handleObject(user)
+ handleObject(user) //Username is hitesh and price is 199   -- giving object as argument
+
 handleObject({
     username: "sam",
     price: 399
-})
+})  // giving direct  object definition in argument
+
+//------------------passing array as an arguments------------
 
 const myNewArray = [200, 400, 100, 600]
 
@@ -66,5 +84,51 @@ function returnSecondValue(getArray){
     return getArray[1]
 }
 
-// console.log(returnSecondValue(myNewArray));
-//console.log(returnSecondValue([200, 400, 500, 1000]));
+ console.log(returnSecondValue(myNewArray)); //400
+
+console.log(returnSecondValue([200, 400, 500, 1000])); // 400  paasing direct array definition
+
+
+// -------- practice 
+
+function myfun(var1) {
+    console.log(`my function has variable : ${var1}`)
+}
+myfun(6)
+
+function myfunc(...temp) {
+  return temp
+}
+console.log(myfunc(4)) //[4]
+
+function myfunc1(...temp) {
+    return temp
+  }
+  console.log(myfunc(4,5,6,7,8)) //[ 4, 5, 6, 7, 8 ]
+
+const myuser = {
+    myuserName : "shivam",
+    age : 90
+}
+
+function myfunc3(obj) {
+ return `my object username is ${obj.myuserName} and age is ${obj.age}`
+}
+console.log(myfunc3(myuser)) // my object username is shivam and age is 90
+
+function myfunc4(obj) {
+    return `my object username is ${obj.myname} and age is ${obj.myage}`
+}
+
+console.log(myfunc4({
+    myname : "hfhf",
+    myage : 78
+}))  //my object username is hfhf and age is 78
+
+function myfunc5(arr) {
+    return arr[3]
+}
+
+console.log(myfunc5([2,5,0,4])) //4
+
+  
