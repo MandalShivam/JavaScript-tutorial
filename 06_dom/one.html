@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body  class="bg-black">
+    <div>
+        <h1  id="title" class="heading">DOM learning on chai aur code<span style = "display: none"> test text</span></h1>
+        <P>
+            Lorem ipsum dolor sit.
+        </P>
+    </div>
+</body>
+</html>
+
+<!-- //in javascript -->
+<!-- to get whole html doc -- document
+to get any element using id -- getElementById 
+   document.getElementById('anyId')
+    document.getAttribute('') -- here we need to pass attribute's key and we get value of attribute
+    ex -  document.getAttribute('id') ->  title
+       -   document.getAttribute('class') -> geading
+     document.setAttribute('id' , MyId) -> -- here we can set value of attribute
+
+
+     
+title.innerText      // where title = document.getElementById('title')
+->'DOM learning on chai aur code'
+title.innerHTML
+'DOM learning on chai aur code'
+title.textContent
+'DOM learning on chai aur code'
+
+diff b/w innerText and TextContent
+ textContent show  all content inside the element but innertext shows only displayed content not 
+ those content which are display none
+   for ex
+
+title.innerHTML
+'DOM learning on chai aur code<span style="display: none"> test text</span>'
+ 
+title.innerText
+'DOM learning on chai aur code'
+title.textContent
+'DOM learning on chai aur code test text'   
+
+-->
