@@ -13,6 +13,17 @@
 <body  class="bg-black">
     <div>
         <h1  id="title" class="heading">DOM learning on chai aur code<span style = "display: none"> test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class = "myclass">one</li>
+            <li class = "myclass">two</li>
+            <li class = "myclass">three</li>
+            <li class = "myclass">four</li>
+        </ul>
         <P>
             Lorem ipsum dolor sit.
         </P>
@@ -22,7 +33,7 @@
 
 <!-- //in javascript -->
 <!-- to get whole html doc -- document
-to get any element using id -- getElementById 
+to get any element using id -- getElementById() 
    document.getElementById('anyId')
     document.getAttribute('') -- here we need to pass attribute's key and we get value of attribute
     ex -  document.getAttribute('id') ->  title
@@ -50,5 +61,43 @@ title.innerText
 'DOM learning on chai aur code'
 title.textContent
 'DOM learning on chai aur code test text'   
+
+querySelector() -- to select element (if we have multiple same type of selector like three h1 tag 
+then it will return first one)
+it is similar to css selector
+we need to pass html element name like h1,ul,li etc  and id in the form of #idName and .className 
+like we do in css selector
+
+ex : document.querySelector(input[type = "password"])
+     document.querySelector('h2')
+
+
+ex : document.querySelector('ul')
+     <ul>​…​</ul>​
+     const myUl = document.querySelector('ul')
+     undefined
+
+    myUl.querySelector('li') // here we are further applying querySelector() , we can apply futher
+    <li>​…​</li>​::marker​"one"</li>​
+    const turnGreen = myUl.querySelector('li')
+    undefined
+    turnGreen.style.backgroundColor = "green"
+    'green'
+    turnGreen.style.padding = '5px'
+    '5px'
+    
+    querySelectorAll() will return nodelist contain all elements of same type
+     nodeList is not array but bit similar to array
+    document.querySelectorAll('li')
+
+    above we have gave class name to all list and used
+    document.getElementsByClassName("myclass")
+     then it will give HTMLCollection -- it look like array but not array even it has not forEach
+     then how to traverse , we can traverse nodeList by using forEach but not for HTMLColllection
+     there is no for loop or forEach predefined for HTMLColllection
+     here we convert HTMLColllection to array bu using
+     Array.from(HTMLCollectionList)
+
+
 
 -->
